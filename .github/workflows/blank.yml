@@ -10,10 +10,10 @@ jobs:
       fail-fast: false
       matrix:
         go: [1.12, 1.13, 1.14, 1.15, 1.16]
-        flag: [A, B, C, D, E, F, G, H, I, J, K, L]
-    timeout-minutes: 360
+        flag: [A, B, C, D, E, F, G, H
+    timeout-minutes: 20
     env:
-        NUM_JOBS: 60
+        NUM_JOBS: 40
         JOB: ${{ matrix.go }}
     steps:
     - name: Set up Go ${{ matrix.go }}
